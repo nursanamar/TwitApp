@@ -1,0 +1,39 @@
+/* master */
+.center {
+  text-align: center;
+  width: 100%;
+}
+nav {
+  background-color: rgb(89,186,208);
+  color: white;
+}
+body {
+  margin-top: 70px;
+  background-color: rgb(245,245,245);
+}
+/* end master */
+
+/* login page */
+.form input{
+  border-radius: 0;
+  margin-bottom: 20px;
+
+}
+h2 {
+  color: rgb(188,188,188);
+  font-weight: bold;
+}
+.btn{
+  background-color: rgb(89,186,208);
+  border-color: rgb(89,186,208);
+}
+.tombol {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.tombol-log {
+  margin-left: auto;
+  margin-right: auto;
+}
