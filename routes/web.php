@@ -14,12 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login',function (){
-  return view('login');
-});
-Route::get('/beranda',function (){
-  return view('beranda');
-});
+Route::post('/daftar','Data@daftar');
+
+Route::get('/beranda','Home@index');
 Route::get('/profil',function (){
   return view('profil');
 });
+Route::get('/data',"Data@data");
+
+Auth::routes();
