@@ -20,3 +20,6 @@ Route::get('/login',function (){
 Route::get('/beranda',function (){
   return view('beranda');
 });
+Route::get('/profil',function (){
+  return view('profil');
+});

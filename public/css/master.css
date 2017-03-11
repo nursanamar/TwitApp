@@ -96,3 +96,37 @@ hr {
 }
 
 /*end beranda */
+/* profil */
+.foto-profil img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.btn-upload{
+  width: 200px;
+  background-color: white;
+  border-color: white;
+  box-shadow: -2px 3px 6px 0px;
+}
+.input input {
+  width: 100%;
+  border-radius: 0;
+  margin-bottom: 20px;
+  box-shadow: -2px 3px 6px 0px;
+}
+.data {
+  background-color: rgb(239, 243,228 );
+  padding: 10px;
+  box-shadow: -2px 3px 6px 0px;
+}
+.tombol-data{
+  width: 100%;
+  font-weight: bold;
+  border-radius: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(96,149,201);
+  border-color: rgb(96,149,201);
+  margin-top: 120px;
+}
