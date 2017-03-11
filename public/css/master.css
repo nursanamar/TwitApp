@@ -24,16 +24,75 @@ h2 {
   font-weight: bold;
 }
 .btn{
-  background-color: rgb(89,186,208);
-  border-color: rgb(89,186,208);
+
+}
+hr {
+  border-top: 5px solid #eee;
 }
 .tombol {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
+  background-color: rgb(89,186,208);
+  border-color: rgb(89,186,208);
 }
 .tombol-log {
   margin-left: auto;
   margin-right: auto;
 }
+/* end login page */
+
+/* beranda */
+.update {
+  background-color: rgb(224,224,224);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.update input {
+  width: 100%;
+  font-weight: bold;
+  border-radius: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(96,149,201);
+  border-color: rgb(96,149,201);
+}
+.own {
+  text-align: right;
+  background-color: rgb(239, 243,228 );
+  box-shadow: -2px 4px 20px 0px;
+  margin-bottom: 20px;
+}
+.status-list {
+  background-color: white;
+  box-shadow: -2px 4px 20px 0px;
+  margin-bottom: 20px;
+}
+.tombol-left{
+  padding-right: 0;
+  margin-top: 20px;
+
+}
+.btn-update {
+
+}
+.gambar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.status h3{
+  font-weight: bold;
+}
+.status img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.status {
+  margin-top: 30px;
+}
+
+/*end beranda */
