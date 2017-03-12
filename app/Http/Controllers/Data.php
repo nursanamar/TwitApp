@@ -13,6 +13,13 @@ class Data extends Controller
   {
       $this->middleware('auth');
   }
+
+  public function addpost(Request $request)
+  {
+    $data = array('userId' => Auth::id() ,'status' => $request->input('post'));
+    DB::table('post')->insert($data);
+  }
+
   public function getpost()
   {
     $data = DB::table('post')->join('users','post.userId','=','users.id')->get();
@@ -23,12 +30,14 @@ class Data extends Controller
     }
     return Response::json($response);
   }
+
   public function daftar(Request $request)
   {
     $data= array("name" => $request->input('name'),
     "email" => $request->input('email'),
     "password" => bcrypt($request->input('password'))
   );
+  dd($data);
     DB::table('users')->insert($data);
   }
 }

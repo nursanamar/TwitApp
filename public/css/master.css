@@ -48,8 +48,9 @@ hr {
   background-color: rgb(224,224,224);
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-top: 50px;
 }
-.update input {
+.update a {
   width: 100%;
   font-weight: bold;
   border-radius: 0;
