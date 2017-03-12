@@ -7,6 +7,7 @@
     <title>Twitter aplication</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/master.css">
+    @yield('js')
   </head>
   <body>
     <nav class='navbar navbar-fixed-top'>
