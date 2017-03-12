@@ -20,7 +20,10 @@ Route::get('/json',function (){
 });
 Route::post('/daftar','Data@daftar');
 
+Route::post('/tambah','Data@addpost');
+
 Route::get('/beranda','Home@index');
+
 Route::get('/profil',function (){
   return view('profil');
 });
