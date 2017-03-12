@@ -51,7 +51,7 @@
             </span>
         @endif
         <div class="center">
-          <input type="submit" name="submit" value="login" class="btn btn-primary tombol">
+          <input type="submit" name="submit" value="Daftar" class="btn btn-primary tombol">
         </div>
       </form>
     </div>

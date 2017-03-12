@@ -31,13 +31,5 @@ class Data extends Controller
     return Response::json($response);
   }
 
-  public function daftar(Request $request)
-  {
-    $data= array("name" => $request->input('name'),
-    "email" => $request->input('email'),
-    "password" => bcrypt($request->input('password'))
-  );
-  dd($data);
-    DB::table('users')->insert($data);
-  }
+
 }
