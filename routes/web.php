@@ -14,20 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/daftar','register@daftar');
+Route::post('/tambah','Data@addpost');
+Route::get('/profil','Data@profil');
+
+//route for ajax
+Route::get('/userdata','Data@userdata');
+Route::get('/data',"Data@getpost");
+Route::get('/beranda','Home@index');
+
+
+Auth::routes();
+
+//route for debug
 Route::get('/json',function (){
   $data = array(array('id' =>1 ,"name" => "Teman 1","status" => "helo semua","image"=>"images/placeholder.jpg","type"=>"friend"),array('id' =>2 ,"name" => "Teman 2","status" => "helo semua","image"=>"images/placeholder.jpg","type"=>"friend"));
   echo json_encode($data);
 });
-Route::post('/daftar','register@daftar');
-Route::get('/postman','register@token');
-Route::post('/tambah','Data@addpost');
 Route::get('/cek','register@cek');
-
-Route::get('/beranda','Home@index');
-
-Route::get('/profil',function (){
-  return view('profil');
-});
-Route::get('/data',"Data@getpost");
-
-Auth::routes();

@@ -13,7 +13,10 @@ class Data extends Controller
   {
       $this->middleware('auth');
   }
-
+  public function profil()
+  {
+    return view('profil');
+  }
   public function getpost()
   {
     $data = DB::table('post')->join('users','post.userId','=','users.id')->get();
@@ -21,6 +24,16 @@ class Data extends Controller
     foreach ($data as $value) {
         $type = ($value->id === Auth::id()) ? "me":"friend";
         array_push($response,array('id'=>$value->id,'name'=>$value->name,'status'=>$value->status,'image'=>$value->image,'type'=> $type));
+    }
+    return Response::json($response);
+  }
+
+  public function userdata()
+  {
+    $data = DB::table('users')->where('id',Auth::id())->get();
+    $response = array();
+    foreach ($data as $value) {
+      array_push($response,array('id'=>$value->id,'name'=>$value->name,'image'=>$value->image,'email' => $value->email,'password'=> $value->password));
     }
     return Response::json($response);
   }

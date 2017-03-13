@@ -1,8 +1,14 @@
 @extends('layouts.master')
-
+@section('js')
+  <script type="text/javascript" src="js/react.js"></script>
+	<script type="text/javascript" src="js/react-dom.js"></script>
+	<script type="text/javascript" src="js/browser.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/babel" src="js/profil.js"></script>
+@endsection
 @section('content')
-  <div class="row">
-    <div class="container">
+  <div id="root" class="row">
+    <!--<div class="container">
       <div class="col-md-4 col-sm-4 col-lg-4">
         <div class="col-md-12 col-sm-12 col-lg-12 foto-profil center">
           <img src="/images/placeholder.jpg" alt="profil">
@@ -29,6 +35,6 @@
           </div>
         </form>
       </div>
-    </div>
+    </div>-->
   </div>
 @endsection

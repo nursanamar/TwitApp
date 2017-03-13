@@ -30,7 +30,7 @@
 
                   @else
                     <li><a href="/beranda">Beranda</a></li>
-                    <li><a href="/Profil">Profil</a></li>
+                    <li><a href="/profil">Profil</a></li>
                     <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a></li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}

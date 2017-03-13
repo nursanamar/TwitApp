@@ -17,6 +17,8 @@ class register extends Controller
   );
     DB::table('users')->insert($data);
   }
+
+  /// hanya untuk testing 
   public function cek(Request $request)
   {
     dd($request);
@@ -24,17 +26,5 @@ class register extends Controller
   public function token()
   {
     return csrf_token();
-  }
-  public function addpost(Request $request)
-  {
-    $data = array('userId' => 1 ,'status' => $request->input('post'));
-    DB::table('post')->insert($data);
-    return "ok";
-  //  if(Request::ajax()) {
-  //   $data = Input::all();
-  //  dd($data);
-  // }
-  // return "sasas";
-
   }
 }
