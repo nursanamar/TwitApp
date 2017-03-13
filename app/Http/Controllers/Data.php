@@ -44,4 +44,25 @@ class Data extends Controller
     DB::table('post')->insert($data);
     return "ok";
   }
+
+  public function updateuser(Request $request)
+  {
+    $data;
+    if ($request->input('password') === "") {
+      $data = array('name' => $request->input('name'),'email' => $request->input('email'));
+    } else {
+      $data = array('name' => $request->input('name'),'email' => $request->input('email'),'password' => bcrypt($request->input('password')));
+    }
+    DB::table('users')->where('id',Auth::id())->update($data);
+
+  }
+
+  public function imageupload(Request $request)
+  {
+    $imagename = time().".".$request->image->getClientOriginalExtension();
+    $request->image->move(public_path('profilimage'),$imagename);
+
+    DB::table('users')->where('id',Auth::id())->update(["image" => "profilimage/".$imagename]);
+    return view('profil');
+  }
 }

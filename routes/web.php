@@ -17,11 +17,12 @@ Route::get('/', function () {
 Route::post('/daftar','register@daftar');
 Route::post('/tambah','Data@addpost');
 Route::get('/profil','Data@profil');
-
+Route::post('/upload','Data@imageupload');
 //route for ajax
 Route::get('/userdata','Data@userdata');
 Route::get('/data',"Data@getpost");
 Route::get('/beranda','Home@index');
+Route::post('/updateuser','Data@updateuser');
 
 
 Auth::routes();
