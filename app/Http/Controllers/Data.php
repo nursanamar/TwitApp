@@ -14,12 +14,6 @@ class Data extends Controller
       $this->middleware('auth');
   }
 
-  public function addpost(Request $request)
-  {
-    $data = array('userId' => Auth::id() ,'status' => $request->input('post'));
-    DB::table('post')->insert($data);
-  }
-
   public function getpost()
   {
     $data = DB::table('post')->join('users','post.userId','=','users.id')->get();
@@ -31,5 +25,10 @@ class Data extends Controller
     return Response::json($response);
   }
 
-
+  public function addpost(Request $request)
+  {
+    $data = array('userId' => Auth::id() ,'status' => $request->input('post'));
+    DB::table('post')->insert($data);
+    return "ok";
+  }
 }

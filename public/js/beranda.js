@@ -58,11 +58,11 @@ function StatusList(){
 }
 function StatusSection(props){
   var list=[];
-  props.data.forEach(data => {
+  props.data.forEach((data,index) => {
     if (data.type === "me") {
-      list.push(<OwnStatus name={data.name} status={data.status} image={data.image} key={data.id} />)
+      list.push(<OwnStatus name={data.name} status={data.status} image={data.image} key={index} />)
     }
-    list.push(<FriendStatus name={data.name} status={data.status} image={data.image} key={data.id} />)
+    list.push(<FriendStatus name={data.name} status={data.status} image={data.image} key={index} />)
   })
   return <div className="row status">
     <div className="container">
@@ -79,6 +79,9 @@ class App extends React.Component {
     };
     this.update = this.update.bind(this);
     this.send = this.send.bind(this);
+    $.ajaxSetup({
+      headers: {'X-CSRF-Token': $('meta[name=csrf-token]').attr('content'),},
+    });
   }
   componentDidMount(){
     $.get("/data",function(res) {
@@ -94,9 +97,12 @@ class App extends React.Component {
     });
   }
   send(){
-    $.post('/tambah',{'status':this.state.update},function(res){
+    $.post('/tambah',{'post':this.state.update},function(res){
       this.componentDidMount();
     }.bind(this));
+    this.setState({
+      update:"",
+    });
   }
   render() {
     return (<div>

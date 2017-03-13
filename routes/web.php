@@ -19,8 +19,9 @@ Route::get('/json',function (){
   echo json_encode($data);
 });
 Route::post('/daftar','register@daftar');
-
+Route::get('/postman','register@token');
 Route::post('/tambah','Data@addpost');
+Route::get('/cek','register@cek');
 
 Route::get('/beranda','Home@index');
 
