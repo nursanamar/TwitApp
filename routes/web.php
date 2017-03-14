@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','Home@index');
 Route::post('/daftar','register@daftar');
 Route::post('/tambah','Data@addpost');
 Route::get('/profil','Data@profil');

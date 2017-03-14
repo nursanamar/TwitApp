@@ -16,9 +16,10 @@ class register extends Controller
     "password" => bcrypt($request->input('password'))
   );
     DB::table('users')->insert($data);
+    return Back();
   }
 
-  /// hanya untuk testing 
+  /// hanya untuk testing
   public function cek(Request $request)
   {
     dd($request);
