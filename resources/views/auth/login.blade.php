@@ -34,20 +34,20 @@
         <input class="form-control" type="email" name="email" value="{{ old('email') }}" required placeholder="email">
         @if ($errors->has('email'))
             <span class="help-block">
-                <strong>{{ $errors->first('email') }}</strong>
+                <strong>{{ $errors->register->first('email') }}</strong>
             </span>
         @endif
         <input class="form-control" type="text" name="name" value="{{ old('name') }}" required autofocus placeholder="Nama">
         @if ($errors->has('name'))
             <span class="help-block">
-                <strong>{{ $errors->first('name') }}</strong>
+                <strong>{{ $errors->register->first('name') }}</strong>
             </span>
         @endif
         <input id="password" type="password" class="form-control" name="password" placeholder="password" required>
 
         @if ($errors->has('password'))
             <span class="help-block">
-                <strong>{{ $errors->first('password') }}</strong>
+                <strong>{{ $errors->register->first('password') }}</strong>
             </span>
         @endif
         <div class="center">
