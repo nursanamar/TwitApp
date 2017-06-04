@@ -37,12 +37,14 @@
         "post-install-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
             "php artisan optimize",
-            "php artisan migrate --force"
+            "php artisan migrate --force",
+           "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize",
-            "php artisan migrate --force"
+            "php artisan migrate --force",
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ]
     },
     "config": {
