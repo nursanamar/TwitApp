@@ -17,7 +17,7 @@ class CreatePasswordResetsTable extends Migration
             $table->increments('id');
             $table->integer('userId');
             $table->text('status');
-            $table->timestamps('');
+            $table->timestamps();
         });
     }
 
